@@ -1,4 +1,6 @@
-# Reference Link
+# How to isolate k8s pods from service?
+
+## Reference Link
 https://medium.com/@danielepolencic/isolating-kubernetes-pods-for-debugging-5fe41e630e9
 
 ## Info
@@ -11,7 +13,9 @@ First, the Service stops routing traffic to the Pod because the Service’s sele
 
 ### Troubleshooting steps
 
+```
 kubectl label pod <pod-name> app=debug --overwrite
+```
 
 
 
