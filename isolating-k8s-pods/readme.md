@@ -1,7 +1,7 @@
-Reference Link
+#Reference Link
 https://medium.com/@danielepolencic/isolating-kubernetes-pods-for-debugging-5fe41e630e9
 
-Info
+##Info
 By changing the labels, you can detach pods from the service(no traffic) and you troubleshoot them live.
 
 A Service routes the traffic to your Pods using the selector app=hello.
