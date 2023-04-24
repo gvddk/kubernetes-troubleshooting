@@ -9,7 +9,7 @@ A Service routes the traffic to your Pods using the selector app=hello.
 First, the Service stops routing traffic to the Pod because the Service’s selector doesn’t match the label.
 
 
-Troubleshooting steps
+### Troubleshooting steps
 
 kubectl label pod <pod-name> app=debug --overwrite
 
