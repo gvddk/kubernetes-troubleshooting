@@ -3,7 +3,7 @@
 Level 1:
 
 Working Directory ---> Staging Area ---> Local Repo  |  Remote Repo
-
+````
 git add
 git commit
 git push
@@ -13,7 +13,7 @@ git merge
 git pull
 git clone
 git checkout
-
+````
 
 Level 2:
 
