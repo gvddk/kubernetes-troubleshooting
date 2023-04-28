@@ -40,9 +40,12 @@ git reset HEAD^ --hard
 Here is a break down of the reset:
 ````
 git reset: The reset command is used to reset the current HEAD (the tip of the current branch) to a specified state.
-HEAD^: This is a shorthand reference to the parent commit of the current HEAD. HEAD refers to the current commit, and the ^ character points to its parent. In this case, you're telling Git to reset the current branch to the previous commit.
+HEAD^: This is a shorthand reference to the parent commit of the current HEAD. HEAD refers to the current commit, and the ^ character points to its parent.
+In this case, you're telling Git to reset the current branch to the previous commit.
 
---hard: This option tells Git to perform a "hard" reset, which means that it will discard all changes in the working directory and staging area since the specified commit. This is in contrast to a "soft" reset (--soft), which keeps changes in the working directory and staging area, or a "mixed" reset (default behavior, no flag), which keeps changes in the working directory but unstages them.
+--hard: This option tells Git to perform a "hard" reset, which means that it will discard all changes in the working directory and staging area since 
+the specified commit. This is in contrast to a "soft" reset (--soft), which keeps changes in the working directory and staging area, or a "mixed" reset 
+(default behavior, no flag), which keeps changes in the working directory but unstages them.
 ```
 Error: Failed to push some references to:
 This error occurs when you try to push your local changes to a remote repository, but the remote branch has commits that you don’t have in your local branch.
