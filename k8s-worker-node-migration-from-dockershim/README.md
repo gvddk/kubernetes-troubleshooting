@@ -40,3 +40,37 @@ step 10:
 Uncordon the node
 kubectl uncordon <node_name>
 ````
+<<<<<<< Updated upstream
+=======
+
+# Q&A
+
+About k8s 1.24 docker runtime changes:
+
+````
+Query - Where exactly we are using Docker inside of k8s cluster?
+
+Answer: Kubernetes support for Docker via dockershim is now removed.Docker 
+as an underlying runtime is being deprecated in favor of runtimes 
+that use the Container Runtime Interface (CRI) created for Kubernetes.
+
+
+Query - Do we need to change the creation of docker images with dockerfile?
+
+Answer: Docker-produced images will continue to work in your 
+cluster with all runtimes, as they always have.
+
+Query - when the docker runtime was deprecated?
+
+Answer: Kubernetes is deprecating Docker as a container runtime after v1.20.
+
+Query - How docker build images work on different runtime?
+
+Answer: The image that Docker produces isn’t really a Docker-specific 
+image—it’s an OCI (Open Container Initiative) image. 
+Any OCI-compliant image, regardless of the tool you use to build it, 
+will look the same to Kubernetes.
+Both containerd and CRI-O know how to pull those images and run them. 
+This is why we have a standard for what containers should look like.
+````
+>>>>>>> Stashed changes
