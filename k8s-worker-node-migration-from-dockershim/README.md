@@ -40,7 +40,6 @@ step 10:
 Uncordon the node
 kubectl uncordon <node_name>
 ````
-<<<<<<< Updated upstream
 =======
 
 # Q&A
@@ -73,4 +72,3 @@ will look the same to Kubernetes.
 Both containerd and CRI-O know how to pull those images and run them. 
 This is why we have a standard for what containers should look like.
 ````
->>>>>>> Stashed changes
