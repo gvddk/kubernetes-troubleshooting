@@ -1,4 +1,4 @@
-#Openshift introduction 
+# Openshift introduction 
 
 - Redhat opensource container platform
 - Developing and hosting enterprise applications
@@ -36,12 +36,12 @@ Components:
     - CLI (oc tool)
 
 ## oc commands
-oc login <https://mycluster.mycompany.com>
-oc login -u developer -p developer 
-oc logout 
-oc whoami -t (generate bearer token)
-oc get projects 
-oc get users 
+* oc login <https://mycluster.mycompany.com>
+* oc login -u developer -p developer 
+* oc logout 
+* oc whoami -t (generate bearer token)
+* oc get projects 
+* oc get users 
 
 
 ## REST API commands 
