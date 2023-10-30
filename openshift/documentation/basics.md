@@ -58,6 +58,9 @@ Components:
 # Build and deploy - Concepts 
     - Application deployment
     - build strategies
-    - 
+
+# Redhat on cloud 
+    - ARO (Redhat openshit on Azure)
+    - ROSA (Redhat openshift on AWS)
 
 
