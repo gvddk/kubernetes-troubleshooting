@@ -6,6 +6,19 @@
 - openshift takes care of managing underlying infrastructure
 - openshift is having 4 flavours 
 
+# Terminology
+Project ---> namespace 
+Machinepool
+
+# Rosa commands 
+rosa list machinepool -c mkto-poc-mct3
+
+## Set max-replicas
+## If your cluster is spread across 3 AZs, it will be good to provide max-replicas that is a multiple of 3
+## DO NOT provide a very high number for max-replicas, since scaling down is not that easy
+rosa edit machinepool --cluster=mkto-poc-mct3 Default --enable-autoscaling --min-replicas=3 --max-replicas=12
+
+
 # Openshift flavours 
 
 openshift origin (opensource)
@@ -42,6 +55,10 @@ Components:
 * oc whoami -t (generate bearer token)
 * oc get projects 
 * oc get users 
+* oc get pods -o wide --field-selector spec.nodeName=ip-10-158-232-234.us-west-2.compute.internal
+* oc adm drain <node_name> --ignore-daemonsets=true
+* oc delete node <node_name>
+
 
 
 ## REST API commands 
