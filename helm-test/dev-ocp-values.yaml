@@ -1,0 +1,15 @@
+subnets:
+- 1.1.1.0/30 #1.1.1.1-2
+- 2.2.2.1/32 #2.2.2.1
+systems:
+- name: app-1
+  netname: app-1-net
+  netid: 111111
+  egressIPs:
+  - 1.1.1.1
+  - 1.1.1.2
+- name: app-2
+  netname: app-2-net
+  netid: 222222
+  egressIPs:
+  - 2.2.2.1
