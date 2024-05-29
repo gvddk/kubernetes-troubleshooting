@@ -15,7 +15,7 @@ brew install helm
 ### How to search and install the charts in helm?
 * helm repo add **REPO_URL**
 * helm repo ls (listing repositories)
-* helm search repo **REPO_NAME** -l
+* helm search repo **REPO_NAME/** -l
 * helm install <customRepoName> <chartName>
 * helm template <customName> helmChartName <Templating all manifest files as single file>
 
