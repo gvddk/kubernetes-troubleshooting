@@ -27,3 +27,57 @@ helm create <chart-name>
 
 * helm push
 * helm pull
+
+### _helpers.tpl file 
+Helm helper file(.tpl) is also called "Partials". These files are basically “includes” that can be embedded into existing files while a Chart is being installed.
+
+```
+_my-common-configmap.tpl:
+
+{{- define "my-common-configuration" -}}
+# Environment
+clusterEnv: {{ index .Values.global.clusterEnv .Values.global.env | quote }}
+namespace: {{ index .Values.global.namespace .Values.global.env | quote }}
+
+my-values.yaml
+--
+global:
+  # env refers to the environment properties belong to during build-time. Default is "development".
+  env: development
+  clusterEnv:
+    development: staging
+    pre_production: preprod
+  registry:
+    development: dev-images
+    pre_production: preprod-images
+
+
+Microservice chart configmap:
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-configmap-name
+  namespace: {{ index .Values.global.namespace .Values.global.env }}
+data:
+  log_level: {{ index .Values.global.log_level .Values.global.env | quote }}
+  ...
+  ...
+  ...
+{{ include "my-common-configuration" . | indent 2 }}
+
+
+Final output:
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-configmap-name
+  namespace: dev
+data:
+  log_level: debug
+  ...
+  ...
+  ...
+  namespace: staging
+  registry: dev-images
+```
