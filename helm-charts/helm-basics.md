@@ -14,6 +14,7 @@ brew install helm
 
 ### How to search and install the charts in helm?
 * helm repo add **REPO_URL**
+* helm repo update (Ensure to have latest information of charts available in the local system)
 * helm repo ls (listing repositories)
 * helm search repo **REPO_NAME/** -l
 * helm install <customRepoName> <chartName>
