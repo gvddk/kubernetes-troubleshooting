@@ -28,7 +28,7 @@ helm create <chart-name>
 ### Commands for pulling and pushing helm charts
 
 * helm push
-* helm pull
+* helm pull **REPO_NAME/CHART_NAME** --version **VERSION_NUMBER**
 
 ### _helpers.tpl file 
 Helm helper file(.tpl) is also called "Partials". These files are basically “includes” that can be embedded into existing files while a Chart is being installed.
