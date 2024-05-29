@@ -18,6 +18,10 @@ brew install helm
 * helm install <customRepoName> <chartName>
 * helm template <customName> helmChartName <Templating all manifest files as single file>
 
+## How to create helm chart templating structure
+```
+helm create <chart-name>
+```
 
 ### Commands for pulling and pushing helm charts
 
