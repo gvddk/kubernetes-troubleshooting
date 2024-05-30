@@ -18,8 +18,7 @@ brew install helm
 * helm repo ls (listing repositories)
 * helm search repo **REPO_NAME/** -l
 * helm install <customRepoName> <chartName>
-* helm template <customName> helmChartName <Templating all manifest files as single file>
-
+* helm template --name-template=**TEMPLATE_NAME** .
 ## How to create helm chart templating structure
 ```
 helm create <chart-name>
