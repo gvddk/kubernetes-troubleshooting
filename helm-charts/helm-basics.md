@@ -19,6 +19,8 @@ brew install helm
 * helm search repo **REPO_NAME/** -l
 * helm install <customRepoName> <chartName>
 * helm template --name-template=**TEMPLATE_NAME** .
+* helm template abc bitnami/external-dns --values=values.yaml
+
 ## How to create helm chart templating structure
 ```
 helm create <chart-name>
