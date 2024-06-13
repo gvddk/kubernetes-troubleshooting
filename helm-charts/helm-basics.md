@@ -35,6 +35,10 @@ helm create <chart-name>
 * helm push
 * helm pull **REPO_NAME/CHART_NAME** --version **VERSION_NUMBER**
 
+### Commands for installing helm charts 
+* helm install s3proxy edgeless/s3proxy --set awsAccessKeyID="$ACCESS_KEY" --set awsSecretAccessKey="$ACCESS_SECRET"
+
+
 ### _helpers.tpl file 
 Helm helper file(.tpl) is also called "Partials". These files are basically “includes” that can be embedded into existing files while a Chart is being installed.
 
