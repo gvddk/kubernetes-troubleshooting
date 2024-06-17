@@ -4,9 +4,20 @@ minikube
 
 k3s
 
+
 kind
+```
+brew install kind
+To create cluster: kind create cluster
+This will take few minuts
+kubectl get pods -A
+
+kind version
+```
 
 docker-desktop
+
+Microk8s
 
 
 
@@ -17,3 +28,10 @@ docker-desktop
 | kind           |              brew install kind              |                                $1 |
 | Docker Desktop | Click on settings, enable docker kubernetes |                                $1 |
 
+
+
+
+References:
+
+- kind : https://medium.com/@martin.hodges/using-kind-to-develop-and-test-your-kubernetes-deployments-54093692c9fa
+- 
