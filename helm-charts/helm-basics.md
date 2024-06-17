@@ -21,7 +21,11 @@ brew install helm
 helm search repo bitnami/external-dns -l (Displays all the versions)
 helm search repo bitnami/external-dns (Only latest version)
 ```
-* helm install <customRepoName> <chartName>
+* helm install *customRepoName* *chartName*
+```
+helm repo add cortex-helm https://cortexproject.github.io/cortex-helm-chart
+helm install cortex cortex-helm/cortex -f cortex-values.yaml
+```
 * helm template --name-template=**TEMPLATE_NAME** .
 * helm template abc bitnami/external-dns --values=values.yaml
 
