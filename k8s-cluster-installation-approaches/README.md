@@ -13,6 +13,11 @@ This will take few minuts
 kubectl get pods -A
 
 kind version
+
+Creating multiple kubernetes clusters:
+kind create cluster --name <your cluster name>
+Deleting kind cluster:
+kind delete cluster --name <your cluster name>
 ```
 
 docker-desktop
