@@ -8,6 +8,9 @@ Redhat/Centos - Yum is a package manager
 
 brew install helm
 
+### Create helm chart structure
+helm create nginx-chart
+
 ### Terminology
 * helm repository (centralized palce for helm charts)
 * helm chart (package manifests files)
@@ -96,3 +99,6 @@ data:
   namespace: staging
   registry: dev-images
 ```
+
+## References
+https://devopscube.com/create-helm-chart/
